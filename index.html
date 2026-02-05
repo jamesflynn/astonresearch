@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Aston Research - AI Consulting & Research Solutions">
+  <title>Aston Research - AI Consulting</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+      line-height: 1.6;
+      color: #333;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    /* Header */
+    header {
+      background: #1a1a2e;
+      color: white;
+      padding: 1rem 0;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    header .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #4fc3f7;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 2rem;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #4fc3f7;
+    }
+
+    /* Hero Section */
+    .hero {
+      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+      color: white;
+      padding: 8rem 0 6rem;
+      margin-top: 60px;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      color: #4fc3f7;
+    }
+
+    .hero p {
+      font-size: 1.3rem;
+      margin-bottom: 2rem;
+      opacity: 0.9;
+    }
+
+    .cta-button {
+      display: inline-block;
+      background: #4fc3f7;
+      color: #1a1a2e;
+      padding: 1rem 2rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .cta-button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 5px 20px rgba(79, 195, 247, 0.4);
+    }
+
+    /* Sections */
+    section {
+      padding: 5rem 0;
+    }
+
+    section h2 {
+      font-size: 2.5rem;
+      margin-bottom: 3rem;
+      text-align: center;
+      color: #1a1a2e;
+    }
+
+    .section-light {
+      background: #f8f9fa;
+    }
+
+    /* Services */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .service-card {
+      background: white;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    .service-card h3 {
+      color: #4fc3f7;
+      margin-bottom: 1rem;
+      font-size: 1.5rem;
+    }
+
+    /* About */
+    .about-content {
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: center;
+      font-size: 1.1rem;
+      line-height: 1.8;
+    }
+
+    /* Contact */
+    .contact-info {
+      max-width: 600px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .contact-info p {
+      margin-bottom: 1rem;
+      font-size: 1.1rem;
+    }
+
+    .contact-info a {
+      color: #4fc3f7;
+      text-decoration: none;
+    }
+
+    .contact-info a:hover {
+      text-decoration: underline;
+    }
+
+    /* Footer */
+    footer {
+      background: #1a1a2e;
+      color: white;
+      text-align: center;
+      padding: 2rem 0;
+      margin-top: 4rem;
+    }
+
+    /* Mobile */
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 2rem;
+      }
+
+      .hero p {
+        font-size: 1.1rem;
+      }
+
+      nav ul {
+        gap: 1rem;
+      }
+
+      section h2 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="logo">Aston Research</div>
+      <nav>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section id="home" class="hero">
+    <div class="container">
+      <h1>AI Consulting</h1>
+      <p>Transforming businesses with artificial intelligence solutions</p>
+      <a href="#contact" class="cta-button">Get Started</a>
+    </div>
+  </section>
+
+  <section id="services">
+    <div class="container">
+      <h2>Our Services</h2>
+      <div class="services-grid">
+        <div class="service-card">
+          <h3>AI Strategy Consulting</h3>
+          <p>Develop comprehensive AI roadmaps aligned with your business objectives. We help you identify opportunities, assess readiness, and create actionable implementation plans.</p>
+        </div>
+            <div class="service-card">
+          <h3>AI Implementation</h3>
+          <p>End-to-end deployment of AI systems into your existing infrastructure. We ensure seamless integration and provide ongoing support for optimal performance.</p>
+        </div>
+        <div class="service-card">
+          <h3>AI Training & Workshops</h3>
+          <p>Empower your team with AI knowledge. We provide customized training programs to help your organization build internal AI capabilities.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="section-light">
+    <div class="container">
+      <h2>About Aston Research</h2>
+      <div class="about-content">
+        <p>Aston Research is an AI consulting firm dedicated to helping organizations harness the power of artificial intelligence. The founders of Aston Research bring over 10 years of combined experience at Google and McKinsey implementing operational solutions for product development and workflow optimization.</p>
+        <p>We partner with businesses across industries to solve complex challenges, optimize operations, and unlock new opportunities through AI implementation.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container">
+      <h2>Get In Touch</h2>
+      <div class="contact-info">
+        <p>Ready to transform your business with AI?</p>
+        <p>Contact us to discuss your project and learn how we can help.</p>
+        <p><strong>Email:</strong> <a href="mailto:contact@astonresearch.ai">contact@astonresearch.ai</a></p>
+        <p><strong>Website:</strong> <a href="https://astonresearch.ai">astonresearch.ai</a></p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 Aston Research. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
