@@ -67,11 +67,36 @@
 
     /* Hero Section */
     .hero {
-      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+      background:
+        radial-gradient(circle at 20% 50%, rgba(79, 195, 247, 0.08) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(79, 195, 247, 0.06) 0%, transparent 50%),
+        linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+      background-attachment: fixed;
       color: white;
       padding: 8rem 0 6rem;
       margin-top: 60px;
       text-align: center;
+      position: relative;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-image:
+        radial-gradient(circle, rgba(79, 195, 247, 0.35) 1.5px, transparent 1.5px),
+        radial-gradient(circle, rgba(79, 195, 247, 0.15) 1px, transparent 1px);
+      background-size: 50px 50px, 25px 25px;
+      background-position: 0 0, 12px 12px;
+      pointer-events: none;
+    }
+
+    .hero .container {
+      position: relative;
+      z-index: 1;
     }
 
     .hero h1 {
@@ -149,24 +174,85 @@
     }
 
     /* Contact */
-    .contact-info {
+    .contact-form {
       max-width: 600px;
       margin: 0 auto;
-      text-align: center;
     }
 
-    .contact-info p {
-      margin-bottom: 1rem;
+    .contact-form p {
+      text-align: center;
+      margin-bottom: 2rem;
       font-size: 1.1rem;
     }
 
-    .contact-info a {
-      color: #4fc3f7;
-      text-decoration: none;
+    .form-group {
+      margin-bottom: 1.25rem;
     }
 
-    .contact-info a:hover {
-      text-decoration: underline;
+    .form-group label {
+      display: block;
+      margin-bottom: 0.4rem;
+      font-weight: 500;
+      color: #1a1a2e;
+    }
+
+    .form-group input,
+    .form-group textarea {
+      width: 100%;
+      padding: 0.75rem 1rem;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      font-family: inherit;
+      font-size: 1rem;
+      transition: border-color 0.3s;
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus {
+      outline: none;
+      border-color: #4fc3f7;
+      box-shadow: 0 0 0 3px rgba(79, 195, 247, 0.15);
+    }
+
+    .form-group textarea {
+      min-height: 140px;
+      resize: vertical;
+    }
+
+    .submit-button {
+      display: inline-block;
+      background: #4fc3f7;
+      color: #1a1a2e;
+      padding: 0.85rem 2.5rem;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: transform 0.3s, box-shadow 0.3s;
+      width: 100%;
+    }
+
+    .submit-button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 5px 20px rgba(79, 195, 247, 0.4);
+    }
+
+    .form-success {
+      display: none;
+      text-align: center;
+      padding: 2rem;
+    }
+
+    .form-success h3 {
+      color: #4fc3f7;
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .form-success p {
+      font-size: 1.1rem;
+      color: #555;
     }
 
     /* Footer */
@@ -245,7 +331,7 @@
     <div class="container">
       <h2>About Aston Research</h2>
       <div class="about-content">
-        <p>Aston Research is an AI consulting firm dedicated to helping organizations harness the power of artificial intelligence. The founders of Aston Research bring over 10 years of combined experience at Google and McKinsey implementing operational solutions for product development and workflow optimization.</p>
+        <p>Aston Research is an AI consulting firm dedicated to helping organizations harness the power of artificial intelligence.</p>
         <p>We partner with businesses across industries to solve complex challenges, optimize operations, and unlock new opportunities through AI implementation.</p>
       </div>
     </div>
@@ -254,11 +340,27 @@
   <section id="contact">
     <div class="container">
       <h2>Get In Touch</h2>
-      <div class="contact-info">
-        <p>Ready to transform your business with AI?</p>
-        <p>Contact us to discuss your project and learn how we can help.</p>
-        <p><strong>Email:</strong> <a href="mailto:contact@astonresearch.ai">contact@astonresearch.ai</a></p>
-        <p><strong>Website:</strong> <a href="https://astonresearch.ai">astonresearch.ai</a></p>
+      <div class="contact-form" id="contact-form-wrapper">
+        <p>Ready to transform your business with AI? Send us a message and we'll get back to you shortly.</p>
+        <form id="contact-form" action="https://formspree.io/f/xwvnnven" method="POST">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required placeholder="Your name">
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required placeholder="your@email.com">
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" required placeholder="Tell us about your project..."></textarea>
+          </div>
+          <button type="submit" class="submit-button">Send Message</button>
+        </form>
+      </div>
+      <div class="form-success" id="form-success">
+        <h3>Message Sent!</h3>
+        <p>Thank you for reaching out. We'll get back to you soon.</p>
       </div>
     </div>
   </section>
@@ -268,5 +370,28 @@
       <p>&copy; 2026 Aston Research. All rights reserved.</p>
     </div>
   </footer>
+
+  <script>
+    const form = document.getElementById('contact-form');
+    form.addEventListener('submit', async function(e) {
+      e.preventDefault();
+      const data = new FormData(form);
+      try {
+        const response = await fetch('https://formspree.io/f/xwvnnven', {
+          method: 'POST',
+          body: data,
+          headers: { 'Accept': 'application/json' }
+        });
+        if (response.ok) {
+          document.getElementById('contact-form-wrapper').style.display = 'none';
+          document.getElementById('form-success').style.display = 'block';
+        } else {
+          alert('Something went wrong. Please try again.');
+        }
+      } catch (error) {
+        alert('Something went wrong. Please try again.');
+      }
+    });
+  </script>
 </body>
 </html>
