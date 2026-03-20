@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(dig astonresearch.ai +short)",
+      "Bash(dig www.astonresearch.ai +short)",
+      "Bash(git -C /Users/jamesflynn/Projects/astonresearch remote -v)",
+      "Bash(dig astonresearch.ai CAA +short)"
+    ]
+  }
+}
