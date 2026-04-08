@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Aston Research - Product Strategy Consulting Solutions">
+  <meta name="description" content="Aston Research - Product Strategy Consulting">
   <title>Aston Research - Product Consulting</title>
 
   <style>
@@ -27,14 +27,14 @@
 
     /* Header */
     header {
-      background: #1a1a2e;
+      background: #0d1a12;
       color: white;
       padding: 1rem 0;
       position: fixed;
       width: 100%;
       top: 0;
       z-index: 1000;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      box-shadow: 0 2px 10px rgba(0,0,0,0.3);
     }
 
     header .container {
@@ -46,7 +46,7 @@
     .logo {
       font-size: 1.5rem;
       font-weight: 700;
-      color: #4fc3f7;
+      color: #2dd4bf;
     }
 
     nav ul {
@@ -62,15 +62,14 @@
     }
 
     nav a:hover {
-      color: #4fc3f7;
+      color: #2dd4bf;
     }
 
     /* Hero Section */
     .hero {
       background:
-        radial-gradient(circle at 20% 50%, rgba(79, 195, 247, 0.08) 0%, transparent 50%),
-        radial-gradient(circle at 80% 80%, rgba(79, 195, 247, 0.06) 0%, transparent 50%),
-        linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+        linear-gradient(rgba(13, 26, 18, 0.55), rgba(13, 26, 18, 0.55)),
+        url('./wallpaper.jpg') center center / cover no-repeat;
       background-attachment: fixed;
       color: white;
       padding: 8rem 0 6rem;
@@ -80,18 +79,7 @@
     }
 
     .hero::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background-image:
-        radial-gradient(circle, rgba(79, 195, 247, 0.35) 1.5px, transparent 1.5px),
-        radial-gradient(circle, rgba(79, 195, 247, 0.15) 1px, transparent 1px);
-      background-size: 50px 50px, 25px 25px;
-      background-position: 0 0, 12px 12px;
-      pointer-events: none;
+      display: none;
     }
 
     .hero .container {
@@ -102,7 +90,7 @@
     .hero h1 {
       font-size: 3rem;
       margin-bottom: 1rem;
-      color: #4fc3f7;
+      color: #2dd4bf;
     }
 
     .hero p {
@@ -113,8 +101,8 @@
 
     .cta-button {
       display: inline-block;
-      background: #4fc3f7;
-      color: #1a1a2e;
+      background: #2dd4bf;
+      color: #0d1a12;
       padding: 1rem 2rem;
       border-radius: 8px;
       text-decoration: none;
@@ -124,7 +112,7 @@
 
     .cta-button:hover {
       transform: translateY(-2px);
-      box-shadow: 0 5px 20px rgba(79, 195, 247, 0.4);
+      box-shadow: 0 5px 20px rgba(45, 212, 191, 0.45);
     }
 
     /* Sections */
@@ -136,11 +124,11 @@
       font-size: 2.5rem;
       margin-bottom: 3rem;
       text-align: center;
-      color: #1a1a2e;
+      color: #0d1a12;
     }
 
     .section-light {
-      background: #f8f9fa;
+      background: #f4f8f6;
     }
 
     /* Services */
@@ -155,11 +143,12 @@
       background: white;
       padding: 2rem;
       border-radius: 12px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+      border-top: 3px solid #2dd4bf;
     }
 
     .service-card h3 {
-      color: #4fc3f7;
+      color: #0d1a12;
       margin-bottom: 1rem;
       font-size: 1.5rem;
     }
@@ -193,7 +182,7 @@
       display: block;
       margin-bottom: 0.4rem;
       font-weight: 500;
-      color: #1a1a2e;
+      color: #0d1a12;
     }
 
     .form-group input,
@@ -210,8 +199,8 @@
     .form-group input:focus,
     .form-group textarea:focus {
       outline: none;
-      border-color: #4fc3f7;
-      box-shadow: 0 0 0 3px rgba(79, 195, 247, 0.15);
+      border-color: #2dd4bf;
+      box-shadow: 0 0 0 3px rgba(45, 212, 191, 0.15);
     }
 
     .form-group textarea {
@@ -221,8 +210,8 @@
 
     .submit-button {
       display: inline-block;
-      background: #4fc3f7;
-      color: #1a1a2e;
+      background: #2dd4bf;
+      color: #0d1a12;
       padding: 0.85rem 2.5rem;
       border: none;
       border-radius: 8px;
@@ -235,7 +224,7 @@
 
     .submit-button:hover {
       transform: translateY(-2px);
-      box-shadow: 0 5px 20px rgba(79, 195, 247, 0.4);
+      box-shadow: 0 5px 20px rgba(45, 212, 191, 0.45);
     }
 
     .form-success {
@@ -245,7 +234,7 @@
     }
 
     .form-success h3 {
-      color: #4fc3f7;
+      color: #2dd4bf;
       font-size: 1.5rem;
       margin-bottom: 0.5rem;
     }
@@ -257,7 +246,7 @@
 
     /* Footer */
     footer {
-      background: #1a1a2e;
+      background: #0d1a12;
       color: white;
       text-align: center;
       padding: 2rem 0;
@@ -301,15 +290,15 @@
 
   <section id="home" class="hero">
     <div class="container">
-      <h1>Product Consulting</h1>
-      <p>Generate market pull for your idea.</p>
+      <h1>Product Strategy Delivered</h1>
+      <p>Tap into demand.</p>
       <a href="#contact" class="cta-button">Get Started</a>
     </div>
   </section>
 
   <section id="services">
     <div class="container">
-      <h2>Our Services</h2>
+      <h2>Services</h2>
       <div class="services-grid">
         <div class="service-card">
           <h3>Product  Consulting</h3>
@@ -317,11 +306,11 @@
         </div>
             <div class="service-card">
           <h3>AI-driven Process Improvement</h3>
-          <p>Identify opportunities for improved quality and efficiency in your product validation processes.</p>
+          <p>Identify opportunities for improved quality and efficiency in your product validation processes. We help you free up your expert attention to where it's most valuable.</p>
         </div>
         <div class="service-card">
           <h3>Product Strategy Training & Workshops</h3>
-          <p>Empower your team with product validation knowledge. We provide customized training programs to help your organization build internal product capabilities.</p>
+          <p>Empower your team with product validation knowledge. We provide training programs to help your organization build internal product capabilities.</p>
         </div>
       </div>
     </div>
@@ -329,11 +318,11 @@
 
   <section id="about" class="section-light">
     <div class="container">
-      <h2>About Aston Research</h2>
+      <h2>About</h2>
       <div class="about-content">
         <p>Aston Research is a Product Consulting firm dedicated to helping early stage organizations derisk new product validation, and GTM strategies.</p>
         <p>We start with your business objectives, strategic advantages, and work backwards from a specific definition of success, to inform your product validation strategy.</p>
-        <p>Aston Research brings expertise and experience spanning multiple industries, with several successful exits.</p>
+        <p>Aston Research brings expertise and experience spanning consumer and B2B tech, with several successful outcomes.</p>
       </div>
     </div>
   </section>
@@ -368,7 +357,7 @@
 
   <footer>
     <div class="container">
-      <p>&copy; 2026 Aston Research. All rights reserved.</p>
+      <p>&copy; 2026 Aston Research. All rights reserved. | Cambridge, MA 02138</p>
     </div>
   </footer>
 
