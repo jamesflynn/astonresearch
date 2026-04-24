@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Aston Research - AI and Product Strategy Consulting">
   <title>Aston Research - AI and Product Consulting</title>
+  <link rel="icon" type="image/png" href="./mark_preview.png">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -51,10 +52,21 @@
     }
 
     .logo {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
       font-size: 1rem;
       font-weight: 590;
       color: #f7f8f8;
       letter-spacing: -0.01em;
+    }
+
+    .logo-mark {
+      width: 22px;
+      height: 22px;
+      object-fit: contain;
+      filter: brightness(0) invert(1);
+      opacity: 0.95;
     }
 
     nav ul {
@@ -365,7 +377,10 @@
 <body>
   <header>
     <div class="container">
-      <div class="logo">Aston Research</div>
+      <div class="logo">
+        <img src="./mark_preview.png" alt="" class="logo-mark">
+        <span>Aston Research</span>
+      </div>
       <nav>
         <ul>
           <li><a href="#home">Home</a></li>
