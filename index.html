@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Aston Research - AI and Product Strategy Consulting">
-  <title>Aston Research - AI and Product Consulting</title>
+  <meta name="description" content="Aston Research - AI Workflow Consulting for Product Teams">
+  <title>Aston Research - AI Adoption for Product Teams</title>
   <link rel="icon" type="image/png" href="./mark_preview.png">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -114,10 +114,13 @@
     .hero h1 {
       font-size: 3rem;
       font-weight: 510;
-      margin-bottom: 1rem;
+      margin-bottom: 1.25rem;
       color: #f7f8f8;
       line-height: 1.0;
       letter-spacing: -1.056px;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
     }
 
     .hero p {
@@ -126,6 +129,9 @@
       color: #8a8f98;
       line-height: 1.6;
       letter-spacing: -0.165px;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
     }
 
     .cta-button {
@@ -170,6 +176,55 @@
       border-bottom: 1px solid rgba(255,255,255,0.05);
     }
 
+    /* Founder */
+    .founder-layout {
+      display: grid;
+      grid-template-columns: 160px 1fr;
+      gap: 3rem;
+      align-items: start;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .founder-photo {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,0.08);
+      background: #191a1b;
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #62666d;
+      font-size: 0.75rem;
+      text-align: center;
+      padding: 1rem;
+    }
+
+    .founder-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .founder-bio h2 {
+      text-align: left;
+      margin-bottom: 1.25rem;
+    }
+
+    .founder-bio p {
+      font-size: 1rem;
+      line-height: 1.8;
+      color: #8a8f98;
+    }
+
+    .founder-bio p + p {
+      margin-top: 0.875rem;
+    }
+
     /* Services */
     .services-grid {
       display: grid;
@@ -185,6 +240,8 @@
       border: 1px solid rgba(255,255,255,0.12);
       box-shadow: 0 1px 2px rgba(0,0,0,0.4), 0 8px 24px rgba(0,0,0,0.35);
       transition: background 0.2s, border-color 0.2s, transform 0.2s, box-shadow 0.2s;
+      display: flex;
+      flex-direction: column;
     }
 
     .service-card:hover {
@@ -207,9 +264,54 @@
       color: #8a8f98;
       line-height: 1.6;
       letter-spacing: -0.165px;
+      flex: 1;
     }
 
-    /* Approach */
+    .service-card-meta {
+      margin-top: 1.25rem;
+      padding-top: 1.25rem;
+      border-top: 1px solid rgba(255,255,255,0.06);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .service-card-price {
+      font-size: 0.8125rem;
+      font-weight: 510;
+      color: #62666d;
+      letter-spacing: -0.13px;
+    }
+
+    .service-card-link {
+      font-size: 0.875rem;
+      font-weight: 510;
+      color: #7170ff;
+      text-decoration: none;
+      letter-spacing: -0.13px;
+      transition: color 0.2s;
+      white-space: nowrap;
+    }
+
+    .service-card-link:hover {
+      color: #828fff;
+    }
+
+    /* How We Think */
+    .approach-prose {
+      max-width: 720px;
+      margin: 0 auto 3rem;
+      font-size: 1rem;
+      line-height: 1.8;
+      color: #8a8f98;
+      text-align: center;
+    }
+
+    .approach-prose p + p {
+      margin-top: 1rem;
+    }
+
     .approach-embed {
       max-width: 960px;
       margin: 0 auto;
@@ -355,6 +457,16 @@
       font-size: 0.875rem;
     }
 
+    footer a {
+      color: #8a8f98;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    footer a:hover {
+      color: #d0d6e0;
+    }
+
     /* Mobile */
     @media (max-width: 768px) {
       .hero h1 {
@@ -373,6 +485,18 @@
       section h2 {
         font-size: 1.75rem;
       }
+
+      .founder-layout {
+        grid-template-columns: 1fr;
+      }
+
+      .founder-photo {
+        margin: 0 auto;
+      }
+
+      .founder-bio h2 {
+        text-align: center;
+      }
     }
   </style>
 </head>
@@ -386,8 +510,8 @@
       <nav>
         <ul>
           <li><a href="#home">Home</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#approach">Approach</a></li>
+          <li><a href="#services">What we do</a></li>
+          <li><a href="#approach">How we think</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
@@ -397,30 +521,60 @@
 
   <section id="home" class="hero">
     <div class="container">
-      <h1>AI Adoption and Product Strategy</h1>
-      <a href="#contact" class="cta-button">Get Started</a>
+      <h1>AI adoption that changes how your product team works.</h1>
+      <p>We help 5–100 person product orgs identify the workflows where AI will move the needle — and skip the ones where it won't. Two-week diagnostic, grounded in the playbook we ran at Google.</p>
+      <a href="#services" class="cta-button">See the diagnostic →</a>
     </div>
   </section>
 
-  <section id="services">
+  <section id="founder" class="section-raised">
     <div class="container">
-      <h2>Services</h2>
-      <div class="services-grid">
-        <div class="service-card">
-          <h3>AI Consulting</h3>
-          <p>We help small and medium enterprises adopt AI deliberately and sustainably. Our work spans the five core use cases where AI delivers enterprise value — creativity, analysis, strategy, research, and automation — identifying where workflow improvements can be piloted, measured, and scaled.</p>
+      <div class="founder-layout">
+        <div class="founder-photo">
+          <!-- Replace with: <img src="your-photo.jpg" alt="[Your Name]"> -->
+          Photo
         </div>
-        <div class="service-card">
-          <h3>Product Strategy Consulting</h3>
-          <p>We help small and medium enterprise derisk new product validation and go-to-market strategies. Starting from your business objectives and strategic advantages, we work from a clear definition of success to build product roadmaps and validation plans you can act on.</p>
+        <div class="founder-bio">
+          <h2>About the founder</h2>
+          <p>Aston Research is led by James Flynn, previously Product Lead at Google, where he led the integration of AI into privacy consend design across all Google services including Search and YouTube. The work cut months of iterative design work and became part of how the team operated.</p>
+          <p>Aston Research exists to bring that same approach — workflow-first, measurement-driven, skeptical of hype — to smaller product organizations that don't have a Google-sized AI team to figure it out internally.</p>
+          <p>Based in Cambridge, MA.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <section id="approach">
+  <section id="services">
     <div class="container">
-      <h2>Our Approach</h2>
+      <h2>What we do</h2>
+      <div class="services-grid">
+        <div class="service-card">
+          <h3>The AI Workflow Diagnostic</h3>
+          <p>Two weeks. Six to eight interviews across your product, design, and engineering teams. One readout. You get a prioritized opportunity map of where AI will pay back in your specific workflows, a recommended 90-day pilot, and a list of where AI is not a great fit for your situation.</p>
+          <div class="service-card-meta">
+            <span class="service-card-price">$7,500 — currently free for 1–2 seed customers in exchange for a published case study.</span>
+            <a href="#contact" class="service-card-link">Learn more →</a>
+          </div>
+        </div>
+        <div class="service-card">
+          <h3>Implementation engagements</h3>
+          <p>After the diagnostic, we scope implementation work to what we found together. No retainers, no open-ended advisory. Each engagement has a defined outcome and a defined end.</p>
+          <div class="service-card-meta">
+            <a href="#contact" class="service-card-link">Talk to us →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="approach" class="section-raised">
+    <div class="container">
+      <h2>How we think</h2>
+      <div class="approach-prose">
+        <p>Most AI consulting fails in one of two ways. Either it stays at the strategic level, a deck full of frameworks that doesn't change what anyone does on Monday morning. Or it jumps straight to tools, deploying Copilot or a chatbot before anyone has asked whether it fits the work.</p>
+        <p>We work in the middle. We start by mapping how work flows through your org today, score each stage against the five patterns where AI delivers real enterprise value (creativity, analysis, strategy, research, automation), and come back with a ranked list of opportunities. Then we pilot the top ones in a measured, reversible way, before scaling.</p>
+        <p>This is the approach that worked inside Google. It works because it treats AI adoption as a workflow design problem, not a tooling problem.</p>
+      </div>
       <div class="approach-embed">
         <div class="approach-embed-ratio">
           <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vSTpEn-phe7LhdFhFpK6ZlYl600q_3FlZd5cXyWNCG13rTIUfJzL_1EcXevNqHvym2OpzSLpAuNUtdf/pubembed?start=false&loop=false&delayms=15000" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
@@ -429,23 +583,23 @@
     </div>
   </section>
 
-  <section id="about" class="section-raised">
+  <section id="about">
     <div class="container">
       <h2>About</h2>
       <div class="about-content">
-        <p>Aston Research is an AI and Product Consulting firm dedicated to helping organizations transofrm workflows with AI, and rapidly derisk new product validation, and GTM strategies.</p>
-        <p>We start with your business objectives, strategic advantages, and work backwards from a specific definition of success, to inform your product validation strategy.</p>
-        <p>We run a proven workflow analysis playbook to surface the best opportunities for workflow augmentation with AI, acroos creative processes, analysis, research, and automation.</p>
-        <p>Aston Research brings expertise and experience spanning consumer and B2B tech, with several successful outcomes. We're based in Cambridge Massachusetts.</p>
+        <p>Aston Research is an AI consulting firm dedicated to helping organizations transform workflows with AI.</p>
+        <p>We start with your business objectives and strategic advantages, and work backwards from a specific definition of success to inform your AI adoption strategy.</p>
+        <p>We run a proven workflow analysis playbook to surface the best opportunities for augmentation with AI, across creative processes, analysis, research, and automation.</p>
+        <p>Aston Research brings expertise spanning consumer and B2B tech, with several successful outcomes. We're based in Cambridge, Massachusetts.</p>
       </div>
     </div>
   </section>
 
-  <section id="contact">
+  <section id="contact" class="section-raised">
     <div class="container">
       <h2>Get In Touch</h2>
       <div class="contact-form" id="contact-form-wrapper">
-        <p>Ready to transform your product strategy? Send us a message and we'll get back to you shortly.</p>
+        <p>Interested in the diagnostic? Tell us about your team and we'll schedule a call.</p>
         <form id="contact-form" action="https://formspree.io/f/xwvnnven" method="POST">
           <div class="form-group">
             <label for="name">Name</label>
@@ -457,7 +611,7 @@
           </div>
           <div class="form-group">
             <label for="message">Message</label>
-            <textarea id="message" name="message" required placeholder="Tell us about your project..."></textarea>
+            <textarea id="message" name="message" required placeholder="Tell us about your team and what you're trying to figure out..."></textarea>
           </div>
           <button type="submit" class="submit-button">Send Message</button>
         </form>
@@ -471,7 +625,7 @@
 
   <footer>
     <div class="container">
-      <p>&copy; 2026 Aston Research. All rights reserved. astonresearch.com astonresearch.ai | Cambridge, MA 02138</p>
+      <p>&copy; 2026 Aston Research. All rights reserved. &nbsp;·&nbsp; Cambridge, MA &nbsp;·&nbsp; <a href="https://www.linkedin.com/in/jamespatrickflynn]" target="_blank" rel="noopener">LinkedIn</a></p>
     </div>
   </footer>
 
